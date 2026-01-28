@@ -713,8 +713,8 @@ def process_image_unit(
     if unit.enable:
         faces = get_faces(pil_to_cv2(image))
 
-        if check_against_nsfw(image):
-            return [(image, info)]
+        # if check_against_nsfw(image):
+        #     return [(image, info)]
         if not unit.blend_faces and not force_blend:
             src_faces = unit.faces
             logger.info(f"will generate {len(src_faces)} images")
